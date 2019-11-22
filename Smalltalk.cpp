@@ -5,6 +5,7 @@
  *      Author: allan
  */
 #include "./includes/Smalltalk.h"
+#include "./includes/constants.h"
 
 
 using namespace std;
@@ -17,6 +18,7 @@ Smalltalk::Smalltalk(std::string myNationality, int iPerson):nationality(myNatio
 }
 
 Smalltalk::~Smalltalk(void){
+	pWatch.reset();
 }
 /**	cycles through phrases added in populatePhrases.
  * Returns them 1 by 1 starting with the first and ending with the last
@@ -31,7 +33,10 @@ std::string Smalltalk::saySomething() {
 }
 
 std::string Smalltalk::getTime() {
-	return pWatch->getTime();
+	if(pWatch){
+		return THE_CURRENT_TIME_IS + pWatch->getTime();
+	}
+	return I_DO_NOT_HAVE_A_WATCH;
 }
 /**removes*/
 std::unique_ptr<Watch> Smalltalk::takeWatch(){

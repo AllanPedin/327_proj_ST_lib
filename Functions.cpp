@@ -3,7 +3,7 @@
  * Functions.cpp
  *
  *  Created on: Nov 5, 2017
- *      Author: keith
+ *      Authors: keith, allan
  */
 #include <iostream>
 #include <memory>
@@ -48,7 +48,7 @@ std::vector<std::unique_ptr<Smalltalk>> getPeople(int numBrit,
 	}
 	for(int i=0;i<watches;i++){
 		std::unique_ptr<Watch> watch = std::unique_ptr<Watch>(new Watch());
-		people[i].get()->giveWatch(watch);
+		people[i]->giveWatch(watch);
 	}
 		//return your vector
 	return people;

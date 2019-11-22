@@ -18,4 +18,10 @@ Smalltalk_American::~Smalltalk_American(void) {
 }
 
 void Smalltalk_American::populatePhrases() {
+	mySmallTalk.push_back(AMERICAN_PHRASE_1);
+	mySmallTalk.push_back(AMERICAN_PHRASE_2);
+	mySmallTalk.push_back(AMERICAN_PHRASE_3);
+	mySmallTalk.push_back(AMERICAN_PHRASE_4);
+	mySmallTalk.push_back(AMERICAN_PHRASE_5);
+
 }
