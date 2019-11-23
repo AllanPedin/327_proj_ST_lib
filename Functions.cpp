@@ -40,7 +40,7 @@ std::vector<std::unique_ptr<Smalltalk>> getPeople(int numBrit,
 		//then give the watches away to first NUM_WATCHES people in the vector
 		// when you are finished using the vector you return
 		//from this function(see Smalltalk header for hints)
-	int watches=-1;
+	int watches;
 	if(people.size()<numWatches){
 		watches=people.size();
 	}else{
